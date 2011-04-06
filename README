@@ -1,0 +1,28 @@
+Grabbbr a PrototypeJS add-on to grab data from Dribbble API  
+This add-on is inspired by Jribbble - http://tylergaw.com/lab/jribbble/
+Author : Fares Farhan - http://dribbble.com/faresfarhan
+
+Usage : 
+just include grabbbr.js within HEAD section of your HTML docs like following line :
+<script src="path/to/grabbbr.js" type="text/javascript" charset="utf-8"></script>
+
+then call the function within your javascript. Following example grab shots from a player once DOM are loaded and insert those images into a div placed within HTML page with id 'shotsContainer'.
+
+<script type="text/javascript" charset="utf-8">
+//<![CDATA[
+	document.observe('dom:loaded',function(){
+		grabbbr.grabPlayersShots('faresfarhan', function(shots){
+				shots.each(function(shot){  
+					var shotImage = new Element('img', {
+	                    src: shot.image_teaser_url
+	                }); 
+			      $('shotsContainer').insert(shotImage);           
+			    });
+		},{page: 1, per_page: 4});
+	// end dom:loaded
+	}); 
+//]]>
+</script>
+
+
+ 
