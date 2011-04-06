@@ -1,0 +1,64 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>grabbbr test</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Expires" content="Fri, 26 Mar 1999 23:59:59 GMT"/>
+<script src="prototype.js" type="text/javascript"></script> 
+<script src="grabbbr.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript" charset="utf-8">
+//<![CDATA[
+document.observe('dom:loaded',function(){             
+    grabbbr.grabShot(143437, function(shot){
+		console.log('143437', shot);
+    })
+	
+	grabbbr.grabShotRebounds(143304, function (shot){
+		console.log('143304', shot);
+	},{page: 1, per_page: 4});
+
+	grabbbr.grabShotsByList('popular',function(shot){
+		 console.log('popular shot', shot);
+	},{page: 1, per_page: 4});
+	
+	grabbbr.grabPlayersShots('faresfarhan', function(shots){
+			console.log('Fares Farhan', shots);
+    },{page: 1, per_page: 4}); 
+
+	grabbbr.grabShotsFromFollowingList('faresfarhan', function(shots){
+			console.log('Fares Farhan, following', shots);
+    },{page: 1, per_page: 4}); 
+
+	grabbbr.grabShotsFromLikesList('faresfarhan', function(shots){
+			console.log('Fares Farhan, likes', shots);
+    },{page: 1, per_page: 4}); 
+
+    grabbbr.grabPlayer('faresfarhan', function(shot){
+		console.log('faresfrahan detail', shot);
+    }); 
+
+    grabbbr.grabPlayerFollowers('faresfarhan', function(shot){
+		console.log('faresfarhan followers', shot);
+    },{page: 1, per_page: 4});
+
+    grabbbr.grabPlayerFollowing('faresfarhan', function(shot){
+		console.log('faresfarhan following', shot);
+    },{page: 1, per_page: 4}); 
+
+    grabbbr.grabPlayerDraftees('faresfarhan', function(shot){
+		console.log('faresfarhan draftees', shot);
+    },{page: 1, per_page: 4});
+
+    grabbbr.grabShotComments(143362, function(shot){
+		console.log('143362 comments', shot);
+    },{page: 1, per_page: 4});
+
+// end dom:loaded
+});
+//]]>
+</script>    
+</head>
+<body>
+	open up console to see the response grabbed from Dribbble API  
+</body>
+</html>
