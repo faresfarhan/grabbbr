@@ -1,9 +1,10 @@
 /*
   Grabbbr a PrototypeJS add-on to grab data from Dribbble API  
-  This add-on is inspired by Jribbble - http://tylergaw.com/lab/jribbble/
+  This add-on is based on Jribbble - http://tylergaw.com/lab/jribbble/
+  All credits goes to @tylergaw
  
-  Author : Fares Farhan - http://dribbble.com/faresfarhan
-  Version : 0.1a
+  Adapted to PrototypeJS add-on by Fares Farhan - http://dribbble.com/faresfarhan
+  Version : 0.1
   Last Updated : 04/06/2011  
 */
 
